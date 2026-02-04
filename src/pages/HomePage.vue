@@ -1,6 +1,18 @@
 <template>
-  <div style="padding: 20px;">
-    <h2>Главная</h2>
-    <p>Тут будет описание игры.</p>
+  <div class="home">
   </div>
 </template>
+
+<style scoped>
+.home {
+  min-height: calc(100vh - 70px);
+  background: url("/bg.jpg") center / cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 32px;
+}
+</style>
