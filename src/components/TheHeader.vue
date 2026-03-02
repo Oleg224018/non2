@@ -5,9 +5,9 @@
       <img src="/logo.png" alt="Лого" class="logo" />
 
       <nav class="nav">
-        <Router-link to="/">ГЛАВНАЯ</Router-link>
-        <Router-link to="/game">ИГРА</Router-link>
-        <Router-link to="/help">ПОМОЩЬ</Router-link>
+        <RouterLink to="/">ГЛАВНАЯ</RouterLink>
+        <RouterLink to="/game">ИГРА</RouterLink>
+        <RouterLink to="/help">ПОМОЩЬ</RouterLink>
       </nav>
 
       <div class="spacer"></div>

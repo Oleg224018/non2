@@ -1,18 +1,37 @@
 <template>
   <div class="home">
+
+    <h1>ДОБРО ПОЖАЛОВАТЬ В НОНОГРАММЫ</h1>
+
+    <RouterLink to="/game" class="btn">
+      НАЧАТЬ ИГРУ
+    </RouterLink>
+
   </div>
 </template>
 
-<style scoped>
+<style scoped> 
+
 .home {
-  min-height: calc(100vh - 70px);
+  height: 90vh;
   background: url("/bg.jpg") center / cover no-repeat;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-top: 40px;
+  text-align: center;
+}
 
+h1 {
+  font-size: 36px;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: black;
   color: white;
-  font-size: 32px;
+  text-decoration: none;
+  font-weight: bold;
 }
 </style>
