@@ -2,7 +2,10 @@
   <header class="header">
     <div class="header-content">
 
+      <RouterLink to="/">
       <img src="/logo.png" alt="Лого" class="logo" />
+    </RouterLink>
+
 
       <nav class="nav">
         <RouterLink to="/">ГЛАВНАЯ</RouterLink>
