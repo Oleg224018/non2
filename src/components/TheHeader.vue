@@ -28,6 +28,7 @@
 
 .header-content {
   max-width: 1200px;
+  padding: 0 16px;
   height: 100%;
   margin: 0 auto;
 
