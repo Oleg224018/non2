@@ -31,7 +31,6 @@
   padding: 0 16px;
   height: 100%;
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;

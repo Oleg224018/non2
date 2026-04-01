@@ -3,7 +3,7 @@
 
     <h1>ПОМОЩЬ</h1>
 
-    <div class="content">
+    <div class="content"> 
 
       <h2> Что такое нонограммы?</h2>
       <p>
@@ -39,7 +39,6 @@
   min-height:100vh;
   background:url("/help-bg.jpg") center no-repeat;
   background-size:900px;
-
   text-align:center;
   padding-top:50px;
 }
@@ -50,11 +49,9 @@ h1{
 }
 
 .content{
-width:100%;
+  width:100%;
   min-height:100vh;
-
   background:rgba(255,255,255,0.8);
-
   text-align:center;
   padding:60px 20px;
 }
