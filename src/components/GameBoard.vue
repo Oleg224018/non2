@@ -17,8 +17,8 @@
         :key="x"
         class="cell"
         :class="{ fill: cell === 1, cross: cell === -1 }"
-        @click="$emit('toggle', y, x)"
-        @contextmenu.prevent="$emit('mark', y, x)"
+        @click="emit('toggle', y, x)"
+        @contextmenu.prevent="emit('mark', y, x)"
       >
         <span v-if="cell === -1">✕</span>
       </div>
@@ -29,15 +29,15 @@
 <script setup lang="ts">
 import type { CellValue } from '../types/game'
 
-defineProps<{
+const props = defineProps<{
   leftHints: number[][]
   topHints: number[][]
   grid: CellValue[][]
 }>()
 
-defineEmits<{
-  toggle: [row: number, col: number]
-  mark: [row: number, col: number]
+const emit = defineEmits<{
+  (e: 'toggle', row: number, col: number): void
+  (e: 'mark', row: number, col: number): void
 }>()
 </script>
 

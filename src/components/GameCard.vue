@@ -1,5 +1,5 @@
 <template>
-  <div class="card" @click="$emit('play')">
+  <div class="card" @click="emit('play')">
     <h2>УРОВЕНЬ {{ level }}</h2>
     <img :src="image" class="image" :alt="`Уровень ${level}`" />
     <UiButton>ИГРАТЬ</UiButton>
@@ -7,15 +7,15 @@
 </template>
 
 <script setup lang="ts">
-import UiButton from './UiButton.vue'
+import UiButton from '@/components/UiButton.vue'
 
-defineProps<{
+const props = defineProps<{
   level: number
   image: string
 }>()
 
-defineEmits<{
-  play: []
+const emit = defineEmits<{
+  (e: 'play'): void
 }>()
 </script>
 

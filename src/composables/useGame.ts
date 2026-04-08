@@ -2,20 +2,20 @@ import { computed, ref } from 'vue'
 import { levels } from '../data/levels'
 import type { CellValue } from '../types/game'
 
-export function useGame() { //упр лог
+export function useGame() { 
   const gameStarted = ref(false)
   const currentLevel = ref(1)
   const win = ref(false)
   const grid = ref<CellValue[][]>([])
 
-  const currentLevelData = computed(() => levels[currentLevel.value]!) //данные текущего уровня из levels
+  const currentLevelData = computed(() => levels[currentLevel.value]!)
   const size = computed(() => currentLevel.value + 3)
   const leftHints = computed(() => currentLevelData.value.left)
   const topHints = computed(() => currentLevelData.value.top)
   const answer = computed(() => currentLevelData.value.answer)
 
   const createGrid = (): CellValue[][] => {
-    return Array.from({ length: size.value }, () => //созд массив строк
+    return Array.from({ length: size.value }, () => 
       Array.from({ length: size.value }, () => 0 as CellValue)
     )
   }
@@ -35,7 +35,7 @@ export function useGame() { //упр лог
   }
 
   const toggle = (r: number, c: number) => {
-    const row = grid.value[r] // берет строку
+    const row = grid.value[r] 
     if (!row) return
 
     if (row[c] === 0) row[c] = 1
@@ -56,8 +56,8 @@ export function useGame() { //упр лог
   }
 
   const checkWin = () => {
-    for (let i = 0; i < size.value; i++) { //идет по строкам 
-      const gridRow = grid.value[i] //тек
+    for (let i = 0; i < size.value; i++) { 
+      const gridRow = grid.value[i] 
       const answerRow = answer.value[i]
 
       if (!gridRow || !answerRow) return
